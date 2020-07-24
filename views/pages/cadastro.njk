@@ -1,0 +1,70 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+<form class="card" action="/lista" method="GET">
+
+    <section class="details">
+        <h3>BEM VINDO!</h3>
+        <h2>Preencha os campos abaixo para realizar o seu cadastro</h2>
+
+        <div class="item">
+            <div>Nome</div>
+            <div>
+                <input type="text" name="nome" placeholder="João da Silva">
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Email</div>
+            <div>
+                <input type="email" name="email" placeholder="usuario@email.com">
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Data de Nascimento</div>
+            <div>
+                <input type="date" name="nascimento">
+            </div>
+        </div>
+
+        <div class="item">
+            <div>CPF</div>
+            <div>
+                <input type="number" name="cpf" placeholder="Digite apenas os números">
+            </div>
+        </div>
+
+        <div class="item">
+            <div>CEP</div>
+            <div>
+                <input type="number" name="cep" placeholder="Digite apenas os números">
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Endereço</div>
+            <div>
+                <input type="text" name="endereco">
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Número</div>
+            <div>
+                <input type="number" name="numero">
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Senha</div>
+            <div>
+                <input type="password" name="password" placeholder="senha">
+            </div>
+        </div>
+
+        <button type="submit">Entrar</button>
+    </section>
+</form>
+{% endblock content %}

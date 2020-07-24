@@ -1,0 +1,30 @@
+{% extends "layout.njk" %}
+
+{% block head%}
+        <title>Login do Usuario</title>
+    {% endblock %}
+
+{% block content %}
+
+    <form class="card" action="/lista" method="GET">
+
+    <section class="details">
+        <h3>Insira os dados abaixo</h3>
+
+        <div class="item">
+            <div>Email</div>
+            <div>
+                <input type="email" name="email" placeholder="usuario@email.com">
+            </div>
+        </div>
+        <div class="item">
+            <div>Senha</div>
+            <div>
+                <input type="password" name="password" placeholder="senha">
+            </div>
+        </div>
+
+        <button type="submit">Entrar</button>
+    </section>
+</form>
+{% endblock content %}
