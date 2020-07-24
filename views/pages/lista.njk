@@ -1,8 +1,26 @@
 {% extends "layout.njk" %}
 
+{% block head%}
+        <title>Minhas atividades</title>
+    {% endblock %}
 
+{% block header %}
+    <header>
+        <div class="links"> 
+            <a href="/">Inicio</a>
+            <a href="/">Sair da minha conta</a>
+        </div>
+    </header>
+    {% endblock %}
 
 {% block content %}
 
-LISTA DE TAREFAS
+<button id="nova-tarefa" action="/nova-tarefa">Nova tarefa</button>
+
+<section class="cards">
+
+</section>
+
+
+
 {% endblock content %}

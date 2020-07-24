@@ -2,5 +2,40 @@
 
 {% block content %}
 
-NOVA TAREFA / ADICIONAR
+<form class="card" action="/lista" method="GET">
+
+    <section class="details">
+        <h3>abaixo, insira os dados da sua tarefa.</h3>
+
+        <div class="item">
+            <div>Tarefa</div>
+            <div>
+                <input type="text" name="tarefa" placeholder="ex: finalizar relatório">
+            </div>
+        </div>
+        <div class="item">
+            <div>Data de Entrega</div>
+            <div>
+                <input type="date" name="entrega">
+            </div>
+        </div>
+        <div class="item">
+            <div>Data de Conclusão</div>
+            <div>
+                <input type="date" name="conclusao">
+            </div>
+        </div>
+        <div class="item">
+            <div>Prioridade de execução</div>
+            <div>
+                <span><input type="radio" name="prioridade" value="U"> Urgente</span>
+                <span><input type="radio" name="prioridade" value="A"> Alta</span>
+                <span><input type="radio" name="prioridade" value="B"> Baixa</span>
+            </div>
+        </div>
+
+        <button type="submit">ADICIONAR</button>
+    </section>
+</form>
+
 {% endblock content %}

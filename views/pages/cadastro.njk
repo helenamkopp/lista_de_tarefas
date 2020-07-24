@@ -1,8 +1,21 @@
 {% extends "layout.njk" %}
 
+{% block head%}
+        <title>Cadastro de Usuário</title>
+    {% endblock %}
+
+{% block header %}
+    <header>
+        <div class="links"> 
+            <a href="/">Inicio</a>
+        </div>
+       
+    </header>
+    {% endblock %}
+
 {% block content %}
 
-<form class="card" action="/lista" method="GET">
+<form class="card" action="/lista" method="get">
 
     <section class="details">
         <h3>BEM VINDO!</h3>
@@ -11,14 +24,14 @@
         <div class="item">
             <div>Nome</div>
             <div>
-                <input type="text" name="nome" placeholder="João da Silva">
+                <input type="text" name="nome" placeholder="ex: João da Silva">
             </div>
         </div>
 
         <div class="item">
             <div>Email</div>
             <div>
-                <input type="email" name="email" placeholder="usuario@email.com">
+                <input type="email" name="email" placeholder="ex: usuario@email.com">
             </div>
         </div>
 
@@ -64,7 +77,7 @@
             </div>
         </div>
 
-        <button type="submit">Entrar</button>
+        <button type="submit">Cadastrar</button>
     </section>
 </form>
 {% endblock content %}
