@@ -133,7 +133,7 @@ header {
     margin-bottom: 15px;
 }
 
-.details .item div:nth-child(2) span { /* vai pegar o span que está dentro da div da filha de numero dois - nesse caso só temos um elemento assim, que fica mais facil pra estilizar */
+.details .item div:nth-child(2) span { 
     padding: 8px 16px;
     background-color: var(--second-color);
     border-radius: 18px;
@@ -144,6 +144,7 @@ header {
     display: inline-block;
     font-weight: bold;
     text-transform: uppercase;
+    
 }
 
 
@@ -161,6 +162,7 @@ input {
 input[type="radio"] {
     width: initial;
     margin-right: 4px;
+    cursor: pointer;
 }
 
 input::placeholder {
@@ -177,6 +179,7 @@ button {
     margin-top: 20px;
     border-radius: 18px;
     width: 100%;
+    cursor: pointer;
 }
 
 #nova-tarefa {
@@ -190,4 +193,45 @@ button {
     border-radius: 18px;
     max-width: 120px;
     margin-left: 20px;
+}
+
+main .lista-tarefas {
+    margin-top: 50px;
+}
+
+.tarefas {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tarefas {
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+
+
+.tarefas h4 {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #111;
+    font-weight: normal;
+}
+
+.tarefas p {
+    margin-top: 5px;
+    color: #777;
+    font-size: 14px;
+}
+
+.tarefas .tarefa {
+    padding: 12px 32px;
+    text-align: center;
+    background-color: rgba(221, 207, 207, 0.89);
+    color: var(--pallete-5);
+    margin-top: 20px;
+    border-radius: 18px;
+    width: 100px;
+    cursor: pointer;
 }

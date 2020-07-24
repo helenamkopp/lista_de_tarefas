@@ -1,13 +1,14 @@
 {% extends "layout.njk" %}
 
 {% block head%}
-        <title>Minhas atividades</title>
+        <title>Lista de tarefas</title>
     {% endblock %}
 
 {% block header %}
     <header>
         <div class="links"> 
             <a href="/">Inicio</a>
+            <a href="/nova-tarefa">Adicionar nova tarefa</a>
             <a href="/">Sair da minha conta</a>
         </div>
     </header>
@@ -15,11 +16,27 @@
 
 {% block content %}
 
-<button id="nova-tarefa" action="/nova-tarefa">Nova tarefa</button>
+<main>
+        <div class="lista-tarefas">
+            <section class="tarefas">
 
-<section class="cards">
+                    <div class="">
+                        <h4>Nome da tarefa</h4>
+                        <p>Entrega</p>
+                        <p>Conclusao</p>
+                        <p>Prioridade de entrega/p>
+                        <button class="tarefa">Concluir</button>
+                        <button class="tarefa">Visualizar</button>
+                        <button class="tarefa">Editar</button>
+                        <button class="tarefa">Excluir</button>
+                    </div>
+              
 
-</section>
+            </section>
+        </div>
+
+    </section>
+</main>
 
 
 

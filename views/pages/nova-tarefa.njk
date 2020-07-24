@@ -1,7 +1,21 @@
 {% extends "layout.njk" %}
 
-{% block content %}
 
+{% block head%}
+        <title>Nova tarefa</title>
+    {% endblock %}
+
+{% block header %}
+    <header>
+        <div class="links"> 
+            <a href="/lista">Minhas tarefas</a>
+        </div>
+    </header>
+    {% endblock %}
+
+
+
+{% block content %}
 <form class="card" action="/lista" method="GET">
 
     <section class="details">
