@@ -1,59 +1,50 @@
 {% extends "layout.njk" %}
 
 {% block head%}
-        <title>Lista de tarefas</title>
-    {% endblock %}
+    <title>Lista de tarefas</title>
+{% endblock %}
 
 {% block header %}
     <header>
-        <div class="links"> 
+        <div class="links">
             <a href="/">Inicio</a>
             <a href="/nova-tarefa">Adicionar nova tarefa</a>
             <a href="/">Sair da minha conta</a>
         </div>
     </header>
-    {% endblock %}
+{% endblock %}
 
 {% block content %}
 
-<main>
+    <main>
         <div class="lista-tarefas">
             <section class="tarefas">
 
-                    <div class="">
-                        <h4>Nome da tarefa</h4>
-                        <p>Entrega</p>
-                        <p>Conclusao</p>
-                        <p>Prioridade de entrega</p>
-                       
-            <a href="" class="preview">
-                <i class="material-icons">preview</i>
-            </a>
-            <a href="" class="done">
-                <i class="material-icons">done</i>
-            </a>
-              <a href="" class="edit">
-                <i class="material-icons">edit</i>
-            </a>
-            <a href="" class="delete">
-                <i class="material-icons">delete</i>
-            </a>
+                <div class="">
+                    <h4>Nome da tarefa</h4>
+                    <p>Entrega</p>
+                    <p>Conclusao</p>
+                    <p>Prioridade de entrega</p>
 
+                    <a href="" class="preview">
+                        <i class="material-icons">preview</i>
+                    </a>
+                    <a href="" class="done">
+                        <i class="material-icons">done</i>
+                    </a>
+                    <a href="" class="edit">
+                        <i class="material-icons">edit</i>
+                    </a>
+                    <a href="" class="delete">
+                        <i class="material-icons">delete</i>
+                    </a>
 
-
-
-                        
-                        
-                    
-                    </div>
-              
+                </div>
 
             </section>
         </div>
 
     </section>
 </main>
-
-
 
 {% endblock content %}
