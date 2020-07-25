@@ -20,17 +20,18 @@
 
     <section class="details">
         <h3>abaixo, insira os dados da sua tarefa.</h3>
+        <p class="dados-obrigatorios">Campos que contém (*) são obrigatórios</p>
 
         <div class="item">
-            <div>Tarefa</div>
+            <div>Tarefa(*)</div>
             <div>
-                <input type="text" name="tarefa" placeholder="ex: finalizar relatório">
+                <input type="text" name="tarefa" placeholder="ex: finalizar relatório" required="required">
             </div>
         </div>
         <div class="item">
-            <div>Data de Entrega</div>
+            <div>Data de Entrega(*)</div>
             <div>
-                <input type="date" name="entrega">
+                <input type="date" name="entrega" required="required">
             </div>
         </div>
         <div class="item">

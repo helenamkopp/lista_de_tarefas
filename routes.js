@@ -1,6 +1,7 @@
 const express = require('express')
 const routes = express.Router()
 
+
 routes.get('/', function(req, res) {
     return res.render("pages/inicio")
 })
@@ -17,6 +18,10 @@ routes.get('/cadastro', function(req, res) {
     return res.render("pages/cadastro")
 })
 
+routes.post('/lista', function(req, res) {
+    return res.send(req.body)
+})
+
 routes.get('/lista', function(req, res) {
     return res.render("pages/lista")
 })
@@ -27,3 +32,4 @@ routes.get('/nova-tarefa', function(req, res) {
 
 
 module.exports = routes
+

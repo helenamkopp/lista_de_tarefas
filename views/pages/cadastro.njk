@@ -1,85 +1,89 @@
 {% extends "layout.njk" %}
 
 {% block head%}
-        <title>Cadastro de Usuário</title>
-    {% endblock %}
+    <title>Cadastro de Usuário</title>
+{% endblock %}
 
 {% block header %}
     <header>
-        <div class="links"> 
+        <div class="links">
             <a href="/">Inicio</a>
         </div>
-       
+
     </header>
-    {% endblock %}
+{% endblock %}
 
 {% block content %}
 
-<form class="card" action="/lista" method="get">
+    <form class="card" action="/lista" method="POST" name="cadastro">
 
-    <section class="details">
-        <h3>BEM VINDO!</h3>
-        <h2>Preencha os campos abaixo para realizar o seu cadastro</h2>
-        <p class="dados-obrigatorios">Dados que contém (*) são obrigatórios</p>
-        <p class="dados-obrigatorios">Menores de 12 anos não podem realizar cadastro</p>
+        <section class="details">
+            <h3>BEM VINDO!</h3>
+            <h2>Preencha os campos abaixo para realizar o seu cadastro</h2>
+            <p class="dados-obrigatorios">Campos que contém (*) são obrigatórios</p>
+            <p class="dados-obrigatorios">Menores de 12 anos não podem realizar cadastro</p>
 
-        <div class="item">
-            <div>Nome (*)</div>
-            <div>
-                <input type="text" name="nome" placeholder="ex: João da Silva">
+            <div class="item">
+                <div>Nome (*)</div>
+                <div>
+                    <input type="text" name="nome" id="nome" placeholder="ex: João da Silva" required="required">
+                </div>
             </div>
-        </div>
 
-        <div class="item">
-            <div>Email (*)</div>
-            <div>
-                <input type="email" name="email" placeholder="ex: usuario@email.com">
+            <div class="item">
+                <div>Email (*)</div>
+                <div>
+                    <input type="email" name="email" id="email" placeholder="ex: usuario@email.com" required="required">
+                </div>
             </div>
-        </div>
 
-        <div class="item">
-            <div>Data de Nascimento(*)</div>
-            <div>
-                <input type="date" name="nascimento">
+            <div class="item">
+                <div>Data de Nascimento(*)</div>
+                <div>
+                    <input type="date" name="nascimento" id="nascimento" required="required">
+                </div>
             </div>
-        </div>
 
-        <div class="item">
-            <div>CPF(*)</div>
-            <div>
-                <input type="number" name="cpf" placeholder="Digite apenas os números">
+            <div class="item">
+                <div>CPF</div>
+                <div>
+                    <input type="number" name="cpf"  id="cpf" placeholder="Digite apenas os números">
+                </div>
             </div>
-        </div>
 
-        <div class="item">
-            <div>CEP</div>
-            <div>
-                <input type="number" name="cep" placeholder="Digite apenas os números">
+            <div class="item">
+                <div>CEP</div>
+                <div>
+                    <input type="number" name="cep" id="cep" placeholder="Digite apenas os números">
+                </div>
             </div>
-        </div>
 
-        <div class="item">
-            <div>Endereço</div>
-            <div>
-                <input type="text" name="endereco">
+            <div class="item">
+                <div>Endereço</div>
+                <div>
+                    <input type="text" name="endereco" id="endereco">
+                </div>
             </div>
-        </div>
 
-        <div class="item">
-            <div>Número</div>
-            <div>
-                <input type="number" name="numero">
+            <div class="item">
+                <div>Número</div>
+                <div>
+                    <input type="number" name="numero" id="numero">
+                </div>
             </div>
-        </div>
 
-        <div class="item">
-            <div>Senha(*)</div>
-            <div>
-                <input type="password" name="password" placeholder="senha">
+            <div class="item">
+                <div>Senha(*)</div>
+                <div>
+                    <input type="password" name="password" id="senha" placeholder="senha" required="required">
+                </div>
             </div>
-        </div>
 
-        <button type="submit">Cadastrar</button>
-    </section>
-</form>
+            <button type="submit" onclick="cadastrar()">Cadastrar</button>
+        </section>
+    </form>
 {% endblock content %}
+
+{% block scripts %}
+    <script src="./scripts/cadastro.js"></script>
+{% endblock scripts %}
