@@ -15,7 +15,7 @@
 
 {% block content %}
 
-    <form class="card" action="/lista" method="POST" name="cadastro">
+    <form class="card" action="/lista" method="get" name="cadastro">
 
         <section class="details">
             <h3>BEM VINDO!</h3>
@@ -79,11 +79,10 @@
                 </div>
             </div>
 
-            <button type="submit" onclick="cadastrar()">Cadastrar</button>
+            <button type="submit" onclick="javascript:validateFields()">Cadastrar</button>
         </section>
     </form>
 {% endblock content %}
 
-{% block scripts %}
-    <script src="./scripts/cadastro.js"></script>
-{% endblock scripts %}
+
+
