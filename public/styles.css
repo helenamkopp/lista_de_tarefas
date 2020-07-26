@@ -166,11 +166,6 @@ input {
     font-weight: bold;
     font-size: 18px;
 }
-input[type="radio"] {
-    width: initial;
-    margin-right: 4px;
-    cursor: pointer;
-}
 
 input::placeholder {
     font-size: 15px;

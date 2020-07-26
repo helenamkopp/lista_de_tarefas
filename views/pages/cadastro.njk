@@ -47,15 +47,14 @@
             <div class="item">
                 <div>CPF</div>
                 <div>
-                    <input type="number" name="cpf"  id="cpf" placeholder="Digite apenas os números">
+                    <input type="number" name="cpf" id="cpf" placeholder="Digite apenas os números">
                 </div>
             </div>
 
             <div class="item">
                 <div>CEP</div>
                 <div>
-                    <input type="text" name="cep" id="cep" placeholder="Digite seu CEP" value="" size="10" maxlength="9"
-               onblur="pesquisacep(this.value)" >
+                    <input type="text" name="cep" id="cep" placeholder="Digite apenas os números" value="" size="10" maxlength="9" onblur="pesquisacep(this.value)">
                 </div>
             </div>
 
@@ -85,5 +84,6 @@
     </form>
 {% endblock content %}
 
-
-
+{% block scripts %}
+    <script src="/cadastro.js"></script>
+{% endblock scripts %}
