@@ -30,7 +30,7 @@ var showTarefas = function () {
     if (tarefas != null) {
         tarefas.forEach(function (elemento, index) {
             console.log(elemento)
-            html += '<li> 📌 ' + elemento.tarefa + '\n ' + elemento.entrega + '\n ' + elemento.conclusao + ' <button class="remove" id="' + index + '">Remover</button></li>';
+            html += '<li> 📌 ' + elemento.tarefa + '\n ' + elemento.entrega + '\n ' + elemento.conclusao + ' <button class="remove" id="' + index + '">Excluir</button> <button class="remove" id="' + index + '">Editar</button> <button class="remove" id="' + index + '">Concluir</button> <button class="remove" id="' + index + '">Visualizar</button> </li>' ;
         });
     }
     html += '</ul>';
