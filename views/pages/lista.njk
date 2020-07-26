@@ -17,30 +17,27 @@
 
     <main>
         <section class="adicionar">
-        <div class="nova-tarefa">
-            <h3>abaixo, insira os dados da sua tarefa.</h3>
-            <p class="dados-obrigatorios">Campos que contém (*) são obrigatórios</p>
+            <div class="nova-tarefa">
+                <h3>abaixo, insira os dados da sua tarefa.</h3>
+                <p class="dados-obrigatorios">Campos que contém (*) são obrigatórios</p>
 
-            <div>Tarefa(*)</div>
-            <input type="text" id="tarefa" required="required">
+                <div>Tarefa(*)</div>
+                <input type="text" id="tarefa" required="required">
 
-            <div>Data de Entrega(*)</div>
-            <input type="date" name="entrega" id="entrega" required="required">
+                <div>Data de Entrega(*)</div>
+                <input type="date" name="entrega" id="entrega" required="required">
 
-            <div>Data de Conclusão</div>
-            <input type="date" name="conclusao" id="conclusao">
+                <div>Data de Conclusão</div>
+                <input type="date" name="conclusao" id="conclusao">
 
-            <button id="add">Adicionar</button>
-        </div>
+                <button id="add">Adicionar</button>
+            </div>
 
-         <div id="msg"></div>
+            <div id="msg"></div>
             <div id="tarefas" class="tarefas"></div>
         </section>
 
-       
-  
-
-        <div class="lista-tarefas">
+        {# <div class="lista-tarefas">
             <section class="tarefas">
 
                 <div class="">
@@ -68,10 +65,10 @@
         </div>
 
     </section>
-</main>
+</main> #}
 
-{% endblock content %}
+    {% endblock content %}
 
-{% block scripts %}
-    <script src="/lista.js"></script>
-{% endblock scripts %}
+    {% block scripts %}
+        <script src="/lista.js"></script>
+    {% endblock scripts %}
