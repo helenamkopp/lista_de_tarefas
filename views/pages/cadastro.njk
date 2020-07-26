@@ -54,14 +54,15 @@
             <div class="item">
                 <div>CEP</div>
                 <div>
-                    <input type="number" name="cep" id="cep" placeholder="Digite apenas os números">
+                    <input type="text" name="cep" id="cep" placeholder="Digite seu CEP" value="" size="10" maxlength="9"
+               onblur="pesquisacep(this.value)" >
                 </div>
             </div>
 
             <div class="item">
                 <div>Endereço</div>
                 <div>
-                    <input type="text" name="endereco" id="endereco">
+                    <input type="text" name="endereco" id="endereco" size="60">
                 </div>
             </div>
 

@@ -45,23 +45,23 @@ function validateFields() {
     var dataNasc = document.getElementById("nascimento").value;
 
     var idade = calculaIdade(dataNasc)
-    if (idade < 12){
+    if (idade < 12) {
         alert("Usuário não pode ser cadastrado, pois é menor de 12 anos")
-    } 
-    
+    }
+
     if (!verificarCPF(strCpf)) {
         alert("CPF Inválido")
     }
 }
 
 function calculaIdade(dataNasc) {
-    
+
 
     var dataAtual = new Date()
 
     var anoAtual = dataAtual.getFullYear()
     var mesAtual = dataAtual.getMonth() + 1
-    var diaAtual = dataAtual.getDate() 
+    var diaAtual = dataAtual.getDate()
 
     var anoNascParts = dataNasc.split('-')
 
@@ -70,15 +70,49 @@ function calculaIdade(dataNasc) {
     var anoNasc = anoNascParts[0]
 
     var idade = anoAtual - anoNasc
-   
+
     if (mesAtual < mesNasc) {
         idade = idade - 1
     } else {
-        if(mesAtual == mesNasc){ 
-            if(diaAtual < diaNasc){
-                idade = idade - 1 
+        if (mesAtual == mesNasc) {
+            if (diaAtual < diaNasc) {
+                idade = idade - 1
             }
         }
     }
     return idade
 }
+
+
+
+function limpa_formulário_cep() {
+    document.getElementById('endereco').value = ("");
+}
+
+function meu_callback(conteudo) {
+    if (!("erro" in conteudo)) {
+        document.getElementById('endereco').value = (conteudo.logradouro);
+    } else {
+        limpa_formulário_cep();
+        alert("CEP não encontrado.");
+    }
+}
+
+function pesquisacep(valor) {
+    var cep = valor.replace(/\D/g, '');
+    if (cep != "") {
+        var validacep = /^[0-9]{8}$/;
+        if(validacep.test(cep)) {
+            document.getElementById('endereco').value="...";
+            var script = document.createElement('script');
+            script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
+            document.body.appendChild(script);
+        } else {
+            limpa_formulário_cep();
+            alert("Formato de CEP inválido.");
+        }
+    } 
+    else {
+        limpa_formulário_cep();
+    }
+};
