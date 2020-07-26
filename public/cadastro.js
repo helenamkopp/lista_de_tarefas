@@ -1,3 +1,4 @@
+
 function verificarCPF(strCpf) {
     if (!/[0-9]{11}/.test(strCpf)) return false;
     if (strCpf === "00000000000") return false;
@@ -32,7 +33,7 @@ function verificarCPF(strCpf) {
     } else {
         resto = 11 - resto;
     }
- 
+
     if (resto !== parseInt(strCpf.substring(10, 11))) {
         return false;
     }
@@ -41,7 +42,43 @@ function verificarCPF(strCpf) {
 }
 function validateFields() {
     var strCpf = document.getElementById('cpf').value;
-    if (!verificarCPF(strCpf)){
+    var dataNasc = document.getElementById("nascimento").value;
+
+    var idade = calculaIdade(dataNasc)
+    if (idade < 12){
+        alert("Usuário não pode ser cadastrado, pois é menor de 12 anos")
+    } 
+    
+    if (!verificarCPF(strCpf)) {
         alert("CPF Inválido")
     }
+}
+
+function calculaIdade(dataNasc) {
+    
+
+    var dataAtual = new Date()
+
+    var anoAtual = dataAtual.getFullYear()
+    var mesAtual = dataAtual.getMonth() + 1
+    var diaAtual = dataAtual.getDate() 
+
+    var anoNascParts = dataNasc.split('-')
+
+    var mesNasc = anoNascParts[1]
+    var diaNasc = anoNascParts[2]
+    var anoNasc = anoNascParts[0]
+
+    var idade = anoAtual - anoNasc
+   
+    if (mesAtual < mesNasc) {
+        idade = idade - 1
+    } else {
+        if(mesAtual == mesNasc){ 
+            if(diaAtual < diaNasc){
+                idade = idade - 1 
+            }
+        }
+    }
+    return idade
 }
