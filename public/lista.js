@@ -30,17 +30,17 @@ var showTarefas = function () {
     if (tarefas != null) {
         tarefas.forEach(function (elemento, index) {
             console.log(elemento)
-            html += '<li> 📌 ' + elemento.tarefa + '\n ' + elemento.entrega + '\n ' + elemento.conclusao + ' <button class="remove" id="' + index + '">Excluir</button> <button class="remove" id="' + index + '">Editar</button> <button class="remove" id="' + index + '">Concluir</button> <button class="remove" id="' + index + '">Visualizar</button> </li>' ;
+            html +=  '<li class="lista"> <i class="material-icons">arrow_forward</i> ' + elemento.tarefa + 'Entrega: ' + elemento.entrega + ' Conclusão: ' + elemento.conclusao + '<i class="material-icons" id="remove-button" name="remove">delete</i>' + '</li>' ;
         });
     }
     html += '</ul>';
 
     document.getElementById('tarefas').innerHTML = html
 
-    var buttons = document.getElementsByClassName('remove');
+    var remove_tarefa = document.getElementsByName('remove');
 
-    for (var i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener('click', removeTarefa);
+    for (var i = 0; i < remove_tarefa.length; i++) {
+        remove_tarefa[i].addEventListener('click', removeTarefa);
     };
 }
 
@@ -51,6 +51,9 @@ var removeTarefa = function () {
     localStorage.setItem('tarefas', JSON.stringify(tarefas));
     document.location.reload(true);
 }
+
+
+
 
 var hasTarefa = function () {
     var tarefas = getTarefas();

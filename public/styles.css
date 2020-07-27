@@ -237,3 +237,12 @@ main .lista-tarefas {
     width: 100px;
     cursor: pointer;
 }
+
+#remove-button {
+    cursor: pointer;
+}
+
+li.lista {
+    align-items: center;
+    font-size: px;
+}
