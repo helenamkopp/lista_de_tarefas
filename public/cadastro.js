@@ -53,6 +53,7 @@ function validateFields() {
         alert("CPF Inválido")
     }
 }
+    
 
 function calculaIdade(dataNasc) {
 
@@ -116,3 +117,4 @@ function pesquisacep(valor) {
         limpa_formulário_cep();
     }
 };
+

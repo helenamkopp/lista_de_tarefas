@@ -47,7 +47,7 @@ var showTarefas = function () {
         tarefas.forEach(function (elemento, index) {
             html += '<li class="lista"> <i class="material-icons">arrow_forward</i> ' + ' Tarefa: ' + elemento.tarefa + ' Entrega: ' + elemento.entrega + ' Conclusão:' + elemento.conclusao + 
                 '<i class="material-icons" id=' + index + ' name="remove">delete</i>' +
-                '<i class="material-icons" id=' + index + ' name="preview">preview</i>' +
+                '<i class="material-icons" id=' + index + ' name="preview">zoom_in</i>' +
                 '<i class="material-icons" id=' + index + ' name="remove">done</i>' +
                 '<i class="material-icons" id=' + index + ' name="edit">edit</i> </li>';
         });
